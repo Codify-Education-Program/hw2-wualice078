@@ -3,5 +3,12 @@
 // If "age" exists, double it; otherwise add age = 0.
 
 function doubleAge(objStr) {
-  // TODO: your code
+  let obj = JSON.parse(objStr);
+  if ("age" in obj) {
+    obj.age *= 2
+  }
+  else {
+    obj.age = 0
+  }
+  return obj
 }
