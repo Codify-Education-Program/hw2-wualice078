@@ -4,5 +4,13 @@
 // If none, return "No number passes the function!"
 
 function largestMystery(arr, mysteryFunc) {
-  // TODO: your code
+  let max = Number.NEGATIVE_INFINITY
+  for (let val of arr) {
+    if (mysteryFunc(val)) {
+      max = Math.max(max, val)
+    }
+  } 
+  if (max == Number.NEGATIVE_INFINITY)
+    return "No number passes the function!"
+  return max
 }
